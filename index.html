@@ -1,0 +1,54 @@
+<html lang="es">
+  <head>
+<meta charset="utf-8">
+<title>Exploratlixco</title>
+<meta http-equiv="cleartype" content="on">
+<meta name="MobileOptimized" content="320">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+      <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+      
+      <nav id="menu" class="menu">
+<img src="imagenes/Dg.png" id="dg">
+</nav>
+      
+      
+      <main id="main" class="panel">
+  <header class="panel-header">
+<input type="checkbox" class="btn-hamburger js-slideout-toggle" id="btn-menu">
+
+                <label class="bloqueo" for="btn-menu"></label>
+  </header>
+
+      </main>
+      
+ </body>
+    
+    
+    <script src="js/slideout.min.js"></script>
+    <script>
+
+      var slideout = new Slideout({
+    'panel': document.getElementById('main'),
+    'menu': document.getElementById('menu'),
+    'padding': 256,
+    'tolerance': 0,
+    'duration': 150
+  });
+
+  document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
+    slideout.toggle();
+  });
+        
+                 
+        slideout.on('close', function () {
+  fixed.style.transition = 'transform 100ms ease';
+});
+        
+      
+      </script>
+      
+</html>
